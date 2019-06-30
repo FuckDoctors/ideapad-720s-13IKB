@@ -13,13 +13,13 @@
 			<key>Fixes</key>
 			<dict>
 				<key>AddDTGP</key>
-				<true/>
+				<false/>
 				<key>AddMCHC</key>
 				<false/>
 				<key>AddPNLF</key>
 				<false/>
 				<key>FixAirport</key>
-				<true/>
+				<false/>
 				<key>FixDarwin</key>
 				<false/>
 				<key>FixDarwin7</key>
@@ -119,6 +119,34 @@
 					RUNfXw==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					U0FUMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					U0FUQQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _OSI to XOSI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X09TSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WE9TSQ==
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -153,7 +181,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 darkwake=0</string>
+		<string>-v keepsyms=1 dart=0 darkwake=0 brcmfx-driver=1 brcmfx-country=#a</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -180,6 +208,19 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>WLAN</string>
+				<key>compatible</key>
+				<string>pci14e4,4353</string>
+				<key>device_type</key>
+				<string>Airport Extreme</string>
+				<key>model</key>
+				<string>DW1820A (BCM4350) 802.11ac Wireless</string>
+				<key>name</key>
+				<string>Airport</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -276,8 +317,6 @@
 			<key>Entries</key>
 			<true/>
 			<key>Legacy</key>
-			<false/>
-			<key>Linux</key>
 			<false/>
 			<key>Tool</key>
 			<true/>
@@ -415,17 +454,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>12/19/2018</string>
+		<string>09/17/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP141.88Z.F000.B00.1812191142</string>
+		<string>MBP152.88Z.F000.B00.1809171524</string>
 		<key>Board-ID</key>
-		<string>Mac-B4831CEBD52A0C4C</string>
+		<string>Mac-827FB448E656EC26</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02706108J9HWVP1M</string>
+		<string>C02821403GUJH4RA8</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -437,7 +476,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>186.0.0.0.0</string>
+		<string>220.250.320.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -453,18 +492,18 @@
 		<key>PlatformFeature</key>
 		<string>0x1A</string>
 		<key>ProductName</key>
-		<string>MacBookPro14,1</string>
+		<string>MacBookPro15,2</string>
 		<key>SerialNumber</key>
-		<string>C02T7QZMHV29</string>
+		<string>C02WRGZQJHCD</string>
 		<key>SmUUID</key>
-		<string>EBBDA167-B3E9-47B2-AF81-9A2F34611BC5</string>
+		<string>28A1198E-244D-43F8-835E-8D1E6845C714</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>5B5B5A12-6C9F-41C4-99C1-A22DA5A29B5C</string>
+		<string>911B39B9-6505-4B0C-AD1E-1FEA9865DDDB</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
