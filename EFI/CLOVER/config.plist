@@ -166,7 +166,7 @@
 				<key>PStates</key>
 				<false/>
 				<key>PluginType</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>PluginType</key>
 			<string>1</string>
@@ -181,7 +181,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v keepsyms=1 dart=0 darkwake=0 brcmfx-driver=2 brcmfx-country=#a</string>
+		<string>keepsyms=1 dart=0 darkwake=0 brcmfx-driver=2 brcmfx-country=#a</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -198,6 +198,11 @@
 		<integer>5</integer>
 		<key>XMPDetection</key>
 		<false/>
+	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>HWPEnable</key>
+		<true/>
 	</dict>
 	<key>Devices</key>
 	<dict>
