@@ -22,7 +22,7 @@
 	<string>1.0</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>MacBookPro14,1-XHC</key>
+		<key>MacBookPro15,2-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBMergeNub</string>
@@ -50,27 +50,27 @@
 				</data>
 				<key>ports</key>
 				<dict>
-					<key>HS01</key>
+					<key>HSP1</key>
 					<dict>
 						<key>DevSpeed</key>
 						<integer>1</integer>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						AQAAAA==
 						</data>
 					</dict>
-					<key>HS02</key>
+					<key>HSP2</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						AgAAAA==
 						</data>
 					</dict>
-					<key>HS03</key>
+					<key>HSP3</key>
 					<dict>
 						<key>DevSpeed</key>
 						<integer>1</integer>
@@ -81,7 +81,7 @@
 						AwAAAA==
 						</data>
 					</dict>
-					<key>HS04</key>
+					<key>HSP4</key>
 					<dict>
 						<key>DevSpeed</key>
 						<integer>2</integer>
@@ -92,7 +92,7 @@
 						BAAAAA==
 						</data>
 					</dict>
-					<key>HS07</key>
+					<key>HSP7</key>
 					<dict>
 						<key>DevSpeed</key>
 						<integer>1</integer>
@@ -103,7 +103,7 @@
 						BwAAAA==
 						</data>
 					</dict>
-					<key>SS01</key>
+					<key>SSP1</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>9</integer>
@@ -112,7 +112,7 @@
 						DQAAAA==
 						</data>
 					</dict>
-					<key>SS02</key>
+					<key>SSP2</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>9</integer>
@@ -124,7 +124,7 @@
 				</dict>
 			</dict>
 			<key>model</key>
-			<string>MacBookPro14,1</string>
+			<string>MacBookPro15,2</string>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>
