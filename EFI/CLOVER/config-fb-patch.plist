@@ -149,20 +149,6 @@
 					WE9TSQ==
 					</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Rename XTBT to YTBT and use with SSDT-YTBT.aml for USB-C hot plug</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					pABYVEJUVEJTRUNQR04=
-					</data>
-					<key>Replace</key>
-					<data>
-					pABZVEJUVEJTRUNQR04=
-					</data>
-				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -193,10 +179,6 @@
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>ssdt_data.aml</string>
-			<string>SSDT-SMBUS.aml</string>
-			<string>SSDT-XCPM.aml</string>
-			<string>SSDT-TYPC.aml</string>
-			<string>SSDT-YTBT.aml</string>
 			<string>ssdt-rmne.aml</string>
 			<string>SSDT-PNLF.aml</string>
 		</array>
