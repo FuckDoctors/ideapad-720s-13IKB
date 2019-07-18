@@ -18,10 +18,11 @@
    - [x] 显卡 - FB注入
    - [x] 声卡 - AppleALC，Layout-id : 22
    - [x] 网卡 - DW1820A，屏蔽针脚
-   - [x] 触摸板 - VoodooI2C，参考官方说明，修改DSDT
+   - [x] 触摸板 - VoodooI2C，参考官方说明，修改DSDT（搜索zhbchwin查看修改的地方）
    - [x] USB 3.0 - Hackintool，通过SSDT注入，未使用USBPorts
-   - [x] 小太阳（亮度调节） - F11和F12键，修改DSDT
+   - [x] 小太阳（亮度调节） - F11和F12键，修改DSDT（搜索zhbchwin查看修改的地方）
    - [ ] 雷电3 - 待完善，已支持热插拔，但外接HDMI显示器直接重启
+   - [ ] HiDPI - 分辨率1080P，而且每次启动Logo都变大一下，所以未开启
 
 4. 其他内容
 
