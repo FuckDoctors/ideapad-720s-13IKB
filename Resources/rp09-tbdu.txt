@@ -1,0 +1,367 @@
+Device (RP09)
+        {
+            Method (_ADR, 0, NotSerialized)  // _ADR: Address
+            {
+                If (LNotEqual (RPA9, Zero))
+                {
+                    Return (RPA9)
+                }
+                Else
+                {
+                    Return (0x001D0000)
+                }
+            }
+
+            Method (_INI, 0, NotSerialized)  // _INI: Initialize
+            {
+                Store (LTR9, LTRZ)
+                Store (PML9, LMSL)
+                Store (PNL9, LNSL)
+                Store (OBF9, OBFZ)
+            }
+
+            OperationRegion (PXCS, PCI_Config, Zero, 0x0480)
+            Field (PXCS, AnyAcc, NoLock, Preserve)
+            {
+                VDID,   32, 
+                Offset (0x50), 
+                L0SE,   1, 
+                    ,   3, 
+                LDIS,   1, 
+                Offset (0x51), 
+                Offset (0x52), 
+                    ,   13, 
+                LASX,   1, 
+                Offset (0x5A), 
+                ABPX,   1, 
+                    ,   2, 
+                PDCX,   1, 
+                    ,   2, 
+                PDSX,   1, 
+                Offset (0x5B), 
+                Offset (0x60), 
+                Offset (0x62), 
+                PSPX,   1, 
+                Offset (0xA4), 
+                D3HT,   2, 
+                Offset (0xD8), 
+                    ,   30, 
+                HPEX,   1, 
+                PMEX,   1, 
+                Offset (0xE2), 
+                    ,   2, 
+                L23E,   1, 
+                L23R,   1, 
+                Offset (0x324), 
+                    ,   3, 
+                LEDM,   1, 
+                Offset (0x420), 
+                    ,   30, 
+                DPGE,   1
+            }
+
+            Field (PXCS, AnyAcc, NoLock, WriteAsZeros)
+            {
+                Offset (0xDC), 
+                    ,   30, 
+                HPSX,   1, 
+                PMSX,   1
+            }
+
+            Name (LTRV, Package (0x04)
+            {
+                Zero, 
+                Zero, 
+                Zero, 
+                Zero
+            })
+            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+            {
+                If (LEqual (Arg0, ToUUID ("e5c937d0-3553-4d7a-9117-ea4d19c3434d") /* Device Labeling Interface */))
+                {
+                    Switch (ToInteger (Arg2))
+                    {
+                        Case (Zero)
+                        {
+                            Name (OPTS, Buffer (0x02)
+                            {
+                                 0x00, 0x00                                     
+                            })
+                            CreateBitField (OPTS, Zero, FUN0)
+                            CreateBitField (OPTS, 0x04, FUN4)
+                            CreateBitField (OPTS, 0x06, FUN6)
+                            CreateBitField (OPTS, 0x08, FUN8)
+                            CreateBitField (OPTS, 0x09, FUN9)
+                            If (LGreaterEqual (Arg1, 0x02))
+                            {
+                                Store (One, FUN0)
+                                If (LTRE)
+                                {
+                                    Store (One, FUN6)
+                                }
+
+                                If (OBFF)
+                                {
+                                    Store (One, FUN4)
+                                }
+
+                                If (LEqual (ECR1, One))
+                                {
+                                    If (LGreaterEqual (Arg1, 0x03))
+                                    {
+                                        Store (One, FUN8)
+                                        Store (One, FUN9)
+                                    }
+                                }
+                            }
+
+                            Return (OPTS)
+                        }
+                        Case (0x04)
+                        {
+                            If (LGreaterEqual (Arg1, 0x02))
+                            {
+                                If (OBFZ)
+                                {
+                                    Return (Buffer (0x10)
+                                    {
+                                        /* 0000 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                                        /* 0008 */  0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00 
+                                    })
+                                }
+                                Else
+                                {
+                                    Return (Buffer (0x10)
+                                    {
+                                        /* 0000 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                                        /* 0008 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 
+                                    })
+                                }
+                            }
+                        }
+                        Case (0x05)
+                        {
+                            If (LEqual (Arg1, One))
+                            {
+                                Return (One)
+                            }
+                        }
+                        Case (0x06)
+                        {
+                            If (LGreaterEqual (Arg1, 0x02))
+                            {
+                                If (LTRZ)
+                                {
+                                    If (LOr (LEqual (LMSL, Zero), LEqual (LNSL, Zero)))
+                                    {
+                                        If (LEqual (PCHS, SPTH))
+                                        {
+                                            Store (0x0846, LMSL)
+                                            Store (0x0846, LNSL)
+                                        }
+                                        ElseIf (LEqual (PCHS, SPTL))
+                                        {
+                                            Store (0x1003, LMSL)
+                                            Store (0x1003, LNSL)
+                                        }
+                                    }
+
+                                    Store (And (ShiftRight (LMSL, 0x0A), 0x07), Index (LTRV, Zero))
+                                    Store (And (LMSL, 0x03FF), Index (LTRV, One))
+                                    Store (And (ShiftRight (LNSL, 0x0A), 0x07), Index (LTRV, 0x02))
+                                    Store (And (LNSL, 0x03FF), Index (LTRV, 0x03))
+                                    Return (LTRV)
+                                }
+                                Else
+                                {
+                                    Return (Zero)
+                                }
+                            }
+                        }
+                        Case (0x08)
+                        {
+                            If (LEqual (ECR1, One))
+                            {
+                                If (LGreaterEqual (Arg1, 0x03))
+                                {
+                                    Return (One)
+                                }
+                            }
+                        }
+                        Case (0x09)
+                        {
+                            If (LEqual (ECR1, One))
+                            {
+                                If (LGreaterEqual (Arg1, 0x03))
+                                {
+                                    Return (Package (0x05)
+                                    {
+                                        0xC350, 
+                                        Ones, 
+                                        Ones, 
+                                        0xC350, 
+                                        Ones
+                                    })
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                Return (Buffer (One)
+                {
+                     0x00                                           
+                })
+            }
+
+            Device (PXSX)
+            {
+                Name (_ADR, Zero)  // _ADR: Address
+                Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+                {
+                    Return (GPRW (0x69, 0x04))
+                }
+            }
+
+            Method (HPME, 0, Serialized)
+            {
+                If (LAnd (LNotEqual (VDID, 0xFFFFFFFF), LEqual (PMSX, One)))
+                {
+                    Notify (PXSX, 0x02)
+                    Store (One, PMSX)
+                    Store (One, PSPX)
+                }
+            }
+
+            Scope (PXSX)
+            {
+                Device (TBDU)
+                {
+                    Name (_ADR, 0x00020000)  // _ADR: Address
+                    Device (XHC)
+                    {
+                        Name (_ADR, Zero)  // _ADR: Address
+                        Method (_PS0, 0, Serialized)  // _PS0: Power State 0
+                        {
+                            Sleep (0xC8)
+                        }
+
+                        Method (_PS3, 0, Serialized)  // _PS3: Power State 3
+                        {
+                            Sleep (0xC8)
+                        }
+
+                        Device (RHUB)
+                        {
+                            Name (_ADR, Zero)  // _ADR: Address
+                            Method (TPLD, 2, Serialized)
+                            {
+                                Name (PCKG, Package (0x01)
+                                {
+                                    Buffer (0x10){}
+                                })
+                                CreateField (DerefOf (Index (PCKG, Zero)), Zero, 0x07, REV)
+                                Store (One, REV)
+                                CreateField (DerefOf (Index (PCKG, Zero)), 0x40, One, VISI)
+                                Store (Arg0, VISI)
+                                CreateField (DerefOf (Index (PCKG, Zero)), 0x57, 0x08, GPOS)
+                                Store (Arg1, GPOS)
+                                CreateField (DerefOf (Index (PCKG, Zero)), 0x4A, 0x04, SHAP)
+                                Store (One, SHAP)
+                                CreateField (DerefOf (Index (PCKG, Zero)), 0x20, 0x10, WID)
+                                Store (0x08, WID)
+                                CreateField (DerefOf (Index (PCKG, Zero)), 0x30, 0x10, HGT)
+                                Store (0x03, HGT)
+                                Return (PCKG)
+                            }
+
+                            Method (TUPC, 2, Serialized)
+                            {
+                                Name (PCKG, Package (0x04)
+                                {
+                                    One, 
+                                    Zero, 
+                                    Zero, 
+                                    Zero
+                                })
+                                Store (Arg0, Index (PCKG, Zero))
+                                Store (Arg1, Index (PCKG, One))
+                                Return (PCKG)
+                            }
+
+                            Device (HS01)
+                            {
+                                Name (_ADR, One)  // _ADR: Address
+                                Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
+                                {
+                                    Return (TUPC (Zero, Zero))
+                                }
+
+                                Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
+                                {
+                                    Return (TPLD (Zero, Zero))
+                                }
+                            }
+
+                            Device (HS02)
+                            {
+                                Name (_ADR, 0x02)  // _ADR: Address
+                                Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
+                                {
+                                    Return (TUPC (Zero, Zero))
+                                }
+
+                                Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
+                                {
+                                    Return (TPLD (Zero, Zero))
+                                }
+                            }
+
+                            Device (SS01)
+                            {
+                                Name (_ADR, 0x03)  // _ADR: Address
+                                Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
+                                {
+                                    Return (TUPC (One, 0x09))
+                                }
+
+                                Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
+                                {
+                                    Return (TPLD (One, 0x08))
+                                }
+                            }
+
+                            Device (SS02)
+                            {
+                                Name (_ADR, 0x04)  // _ADR: Address
+                                Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
+                                {
+                                    Return (TUPC (Zero, Zero))
+                                }
+
+                                Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
+                                {
+                                    Return (TPLD (Zero, Zero))
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
+                Return (GPRW (0x69, 0x04))
+            }
+
+            Method (_PRT, 0, NotSerialized)  // _PRT: PCI Routing Table
+            {
+                If (PICM)
+                {
+                    Return (AR04 ())
+                }
+
+                Return (PR04 ())
+            }
+        }

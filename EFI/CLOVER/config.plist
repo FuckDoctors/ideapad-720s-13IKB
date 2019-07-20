@@ -197,6 +197,7 @@
 			<string>SSDT-XCPM.aml</string>
 			<string>SSDT-TYPC.aml</string>
 			<string>SSDT-YTBT.aml</string>
+			<string>SSDT-THUNDERBOLT.aml</string>
 			<string>ssdt-rmne.aml</string>
 			<string>SSDT-PNLF.aml</string>
 		</array>
@@ -292,7 +293,7 @@
 				</data>
 				<key>framebuffer-con0-type</key>
 				<data>
-				AgAAAA==
+				AAQAAA==
 				</data>
 				<key>framebuffer-con1-busid</key>
 				<data>

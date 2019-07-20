@@ -1,0 +1,139 @@
+
+Verbs from Linux Codec Dump File: codec#0
+
+Codec: Realtek ALC298   Address: 0   DevID: 283902616 (0x10ec0298)
+
+   Jack   Color  Description                  Node     PinDefault             Original Verbs
+--------------------------------------------------------------------------------------------------------
+Digital Unknown  Mic at Oth Mobile-In        18 0x12   0xb7a60140   01271c40 01271d01 01271ea6 01271fb7
+Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   01371c00 01371d00 01371e00 01371f40
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   01471c10 01471d01 01471e17 01471f90
+    1/8   Black  Speaker at Ext Rear         23 0x17   0x411111f0   01771cf0 01771d11 01771e11 01771f41
+    1/8   Black  Mic at Ext Right            24 0x18   0x04a11030   01871c30 01871d10 01871ea1 01871f04
+    1/8   Black  Speaker at Ext Rear         25 0x19   0x411111f0   01971cf0 01971d11 01971e11 01971f41
+ Speaker at Ext Rear    0x1a 0x1a                        1091637744 01a71cf0 01a71d11     01a71e11 01a71f41  
+Optical  Purple  Modem Hand at Ext N/A       29 0x1d   0x4075822d   01d71c2d 01d71d82 01d71e75 01d71f40
+    1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   01e71cf0 01e71d11 01e71e11 01e71f41
+    1/8   Black  Speaker at Ext Rear         31 0x1f   0x411111f0   01f71cf0 01f71d11 01f71e11 01f71f41
+    1/8   Black  HP Out at Ext Right         33 0x21   0x04211020   02171c20 02171d10 02171e21 02171f04
+--------------------------------------------------------------------------------------------------------
+
+
+   Jack   Color  Description                  Node     PinDefault             Modified Verbs
+--------------------------------------------------------------------------------------------------------
+Digital Unknown  Mic at Oth Mobile-In        18 0x12   0xb7a60140   01271c40 01271d00 01271ea6 01271fb0
+Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   01371c00 01371d00 01371e00 01371f40
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   01471c50 01471d00 01471e17 01471f90
+    1/8   Black  Mic at Ext Right            24 0x18   0x04a11030   01871c30 01871d10 01871ea1 01871f00
+Optical  Purple  Modem Hand at Ext N/A       29 0x1d   0x4075822d   01d71c20 01d71d80 01d71e75 01d71f40
+    1/8   Black  HP Out at Ext Right         33 0x21   0x04211020   02171c60 02171d10 02171e21 02171f00
+--------------------------------------------------------------------------------------------------------
+
+Modified Verbs in One Line: 01271c40 01271d00 01271ea6 01271fb0 01371c00 01371d00 01371e00 01371f40 01471c50 01471d00 01471e17 01471f90 01871c30 01871d10 01871ea1 01871f00 01d71c20 01d71d80 01d71e75 01d71f40 02171c60 02171d10 02171e21 02171f00
+--------------------------------------------------------------------------------------------------------
+
+
+
+   Jack   Color  Description                  Node     PinDefault             Modified Verbs
+--------------------------------------------------------------------------------------------------------
+Digital Unknown  Mic at Oth Mobile-In        18 0x12   0xb7a60140   01271c40 01271d00 01271ea6 01271fb0
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   01471c50 01471d00 01471e17 01471f90
+    1/8   Black  Mic at Ext Right            24 0x18   0x04a11030   01871c30 01871d10 01871ea1 01871f00
+    1/8   Black  HP Out at Ext Right         33 0x21   0x04211020   02171c60 02171d10 02171e21 02171f00
+
+[   20.191340] snd_hda_codec_realtek hdaudioC0D0: autoconfig for ALC298: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:speaker
+[   20.191342] snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   20.191344] snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x21/0x0/0x0/0x0/0x0)
+[   20.191345] snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0
+[   20.191346] snd_hda_codec_realtek hdaudioC0D0:    inputs:
+[   20.191348] snd_hda_codec_realtek hdaudioC0D0:      Mic=0x18
+[   20.191349] snd_hda_codec_realtek hdaudioC0D0:      Internal Mic=0x12
+
+
+0x14 <- 0x0d <- 0x03 <-0x03
+0x21 <- 0x0c <- 0x02 <-0x02
+0x12 -> 0x22 -> 0x09,	0x12 -> 0x24 -> 0x11
+0x18 -> 0x0b -> 0x0c
+
+ Analog Unknown  Speaker at Int N/A			0x03 -> 0x0d -> 0x14		3 -> 13 -> 20
+    1/8   Black  HP Out at Ext Right		0x02 -> 0x0c -> 0x21		2 -> 12 -> 33
+Digital Unknown  Mic at Oth Mobile-In		0x09 -> 0x22 -> 0x12		9 -> 34 -> 18
+Digital Unknown  Mic at Oth Mobile-In		0x11 -> 0x24 -> 0x12		17 -> 36 -> 18
+    1/8   Black  Mic at Ext Right			0x0c -> 0x0b -> 0x18		12 -> 11 -> 24
+	
+
+   Jack   Color  Description                  Node     PinDefault             Original Verbs
+--------------------------------------------------------------------------------------------------------
+Digital Unknown  Mic at Oth Mobile-In        18 0x12   0xb7a60140   01271c40 01271d01 01271ea6 01271fb7
+Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   01371c00 01371d00 01371e00 01371f40
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   01471c10 01471d01 01471e17 01471f90
+    1/8   Black  Speaker at Ext Rear         23 0x17   0x411111f0   01771cf0 01771d11 01771e11 01771f41
+    1/8   Black  Mic at Ext Right            24 0x18   0x04a11030   01871c30 01871d10 01871ea1 01871f04
+    1/8   Black  Speaker at Ext Rear         25 0x19   0x411111f0   01971cf0 01971d11 01971e11 01971f41
+				Speaker at Ext Rear          26 0x1a   0x411111f0   01a71cf0 01a71d11 01a71e11 01a71f41  
+Optical  Purple  Modem Hand at Ext N/A       29 0x1d   0x4075822d   01d71c2d 01d71d82 01d71e75 01d71f40
+    1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   01e71cf0 01e71d11 01e71e11 01e71f41
+    1/8   Black  Speaker at Ext Rear         31 0x1f   0x411111f0   01f71cf0 01f71d11 01f71e11 01f71f41
+    1/8   Black  HP Out at Ext Right         33 0x21   0x04211020   02171c20 02171d10 02171e21 02171f04
+--------------------------------------------------------------------------------------------------------
+
+
+   Jack   Color  Description                  Node     PinDefault   PinDefault     				Original Verbs
+---------------------------------------------------------------------------------------------------------------------
+Digital Unknown  Mic at Oth Mobile-In        18 0x12   0xb7a60140   0x4001a6b7  01271c40 01271d01 01271ea6 01271fb7
+Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   0x00000040	01371c00 01371d00 01371e00 01371f40
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   0x10011790	01471c10 01471d01 01471e17 01471f90
+    1/8   Black  Speaker at Ext Rear         23 0x17   0x411111f0   0xf0111141	01771cf0 01771d11 01771e11 01771f41
+    1/8   Black  Mic at Ext Right            24 0x18   0x04a11030   0x3010ab04	01871c30 01871d10 01871ea1 01871f04
+    1/8   Black  Speaker at Ext Rear         25 0x19   0x411111f0   0xf0111141	01971cf0 01971d11 01971e11 01971f41
+				Speaker at Ext Rear          26 0x1a   0x411111f0   0xf0111141	01a71cf0 01a71d11 01a71e11 01a71f41  
+Optical  Purple  Modem Hand at Ext N/A       29 0x1d   0x4075822d   0x2d827540	01d71c2d 01d71d82 01d71e75 01d71f40
+    1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   0xf0111141	01e71cf0 01e71d11 01e71e11 01e71f41
+    1/8   Black  Speaker at Ext Rear         31 0x1f   0x411111f0   0xf0111141	01f71cf0 01f71d11 01f71e11 01f71f41
+    1/8   Black  HP Out at Ext Right         33 0x21   0x04211020   0x30102104	02171c20 02171d10 02171e21 02171f04
+---------------------------------------------------------------------------------------------------------------------
+
+   Jack   Color  Description                  Node     PinDefault   PinDefault     				Original Verbs
+---------------------------------------------------------------------------------------------------------------------
+Digital Unknown  Mic at Oth Mobile-In        18 0x12   0xb7a60140   0x2001a6b7  01271c40 01271d01 01271ea6 01271fb7
+Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   0x00000040	01371c00 01371d00 01371e00 01371f40
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   0x10011790	01471c10 01471d01 01471e17 01471f90
+    1/8   Black  Speaker at Ext Rear         23 0x17   0x411111f0   0xf0000040	01771cf0 01771d11 01771e11 01771f41
+    1/8   Black  Mic at Ext Right            24 0x18   0x04a11030   0x7010ab04	01871c30 01871d10 01871ea1 01871f04
+    1/8   Black  Speaker at Ext Rear         25 0x19   0x411111f0   0xf0000040	01971cf0 01971d11 01971e11 01971f41
+				Speaker at Ext Rear          26 0x1a   0x411111f0   0xf0000040	01a71cf0 01a71d11 01a71e11 01a71f41  
+Optical  Purple  Modem Hand at Ext N/A       29 0x1d   0x4075822d   0x2d827540	01d71c2d 01d71d82 01d71e75 01d71f40
+    1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   0xf0000040	01e71cf0 01e71d11 01e71e11 01e71f41
+    1/8   Black  Speaker at Ext Rear         31 0x1f   0x411111f0   0xf0000040	01f71cf0 01f71d11 01f71e11 01f71f41
+    1/8   Black  HP Out at Ext Right         33 0x21   0x04211020   0x20102b04	02171c20 02171d10 02171e21 02171f04
+---------------------------------------------------------------------------------------------------------------------
+
+
+  Node     PinDefault   PinDefault 
+-----------------------------------
+ 18 0x12   0xb7a60140   0x2001a6b7 
+ 19 0x13   0x40000000   0x00000040
+ 20 0x14   0x90170110   0x40011790
+ 23 0x17   0x411111f0   0xf0000040
+ 24 0x18   0x04a11030   0x7010ab04
+ 25 0x19   0x411111f0   0xf0000040
+ 26 0x1a   0x411111f0   0xf0000040
+ 29 0x1d   0x4075822d   0x2d827540
+ 30 0x1e   0x411111f0   0xf0000040
+ 31 0x1f   0x411111f0   0xf0000040
+ 33 0x21   0x04211020   0x30102b04
+-----------------------------------
+
+01271c20 01271d01 01271ea6 01271fb7
+01371c00 01371d00 01371e00 01371f40
+01471c40 01471d01 01471e17 01471f90 01470c02
+01771cf0 01771d00 01771e00 01771f40
+01871c70 01871d10 01871eab 01871f04
+01971cf0 01971d00 01971e00 01971f40
+01a71cf0 01a71d00 01a71e00 01a71f40
+01d71c2d 01d71d82 01d71e75 01d71f40
+01e71cf0 01e71d00 01e71e00 01e71f40
+01f71cf0 01f71d00 01f71e00 01f71f40
+02171c30 02171d10 02171e2b 02171f04 02170c02
+
+01271c20 01271d01 01271ea6 01271fb7 01371c00 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01771cf0 01771d00 01771e00 01771f40 01871c70 01871d10 01871eab 01871f04 01971cf0 01971d00 01971e00 01971f40 01a71cf0 01a71d00 01a71e00 01a71f40 01d71c2d 01d71d82 01d71e75 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 01f71cf0 01f71d00 01f71e00 01f71f40 02171c30 02171d10 02171e2b 02171f04 02170c02
