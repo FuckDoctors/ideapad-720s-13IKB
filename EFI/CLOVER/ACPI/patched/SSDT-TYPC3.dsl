@@ -28,6 +28,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "Type-C", 0x00003000)
         {
             Return (One)
         }
+        
+        Method (_STA, 0, NotSerialized)  // _STA: Status
+		{
+			Return (0x0F)
+		}
 
         Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
         {

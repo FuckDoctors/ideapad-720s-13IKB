@@ -151,6 +151,20 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>rename _RMV to XRMV, pair with SSDT-TYPC.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1JNVg==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFJNVg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Rename XTBT to YTBT and use with SSDT-YTBT.aml for USB-C hot plug</string>
 					<key>Disabled</key>
 					<false/>
@@ -167,6 +181,21 @@
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
+		<key>DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>PtidDevc</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>xh_rvp11</string>
+			</dict>
+		</array>
 		<key>FixHeaders</key>
 		<true/>
 		<key>HaltEnabler</key>
@@ -195,11 +224,11 @@
 			<string>ssdt_data.aml</string>
 			<string>SSDT-SMBUS.aml</string>
 			<string>SSDT-XCPM.aml</string>
-			<string>SSDT-TYPC.aml</string>
+			<string>SSDT-TB3_v3.aml</string>
 			<string>SSDT-YTBT.aml</string>
-			<string>SSDT-THUNDERBOLT.aml</string>
 			<string>ssdt-rmne.aml</string>
 			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-Deep-Idle.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -450,6 +479,20 @@
 		<false/>
 		<key>KernelToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				ILniAAAADzA=
+				</data>
+				<key>Replace</key>
+				<data>
+				ILniAAAAkJA=
+				</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Disable panic kext logging on 10.14 release kernel (credit vit9696)</string>
