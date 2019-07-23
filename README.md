@@ -26,9 +26,33 @@
    - [x] 睡眠 - 貌似正常
    - [x] 变频 - 13档，1300-3400
 
-4. 其他内容
+4. 参考资料（感谢所有人）
 
-   待补充
+   - 笔记本入手前的调查资料
+      - [联想miix520 平板pc二合一 黑苹果macos10.14「逼近完美」](https://github.com/acai66/lenovo-miix-520-hackintosh-CLOVER)
+      - [Yoga-730-hackintosh](https://github.com/dragonflylee/Yoga-730-hackintosh)
+   - DSDT/SSDT (关键代码：iasl -da -dl *.aml)
+      - [联合DSDT和SSDT进行反编译——减少DSDT和SSDT错误的尝试](http://bbs.pcbeta.com/viewthread-1475332-1-1.html)
+   - 显卡
+      - [[Guide] Intel Framebuffer patching using WhateverGreen](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
+      - [教程：利用Hackintool打开第8代核显HDMI/DVI输出的正确姿势](https://blog.daliansky.net/Tutorial-Using-Hackintool-to-open-the-correct-pose-of-the-8th-generation-core-display-HDMI-or-DVI-output.html)
+   - USB定制
+      - [Hackintool(原Intel FB-Patcher)使用教程及插入姿势](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html)
+   - 触控板
+      - [GPIO Pinning](https://voodooi2c.github.io/#GPIO%20Pinning/GPIO%20Pinning)
+      - [VoodooI2C触摸板驱动教程](https://www.penghubingzhou.cn/2019/01/06/VoodooI2C%20DSDT%20Edit/)
+   - DW1820A驱动
+      - [DW1820A(BCM94350ZAE) 的子型号说明和一些研究，19年5月发布](http://bbs.pcbeta.com/viewthread-1817694-1-1.html)
+      - [DW1820A FOR 7490 - HELP](https://osxlatitude.com/forums/topic/11540-dw1820a-for-7490-help/)
+   - 小太阳
+      - [[教程] [授权翻译] 给DSDT/SSDT打补丁，实现笔记本亮度调节](http://bbs.pcbeta.com/viewthread-1571456-1-1.html)
+      - [xps13 亮度调节](http://bbs.pcbeta.com/viewthread-1671644-1-1.html)
+   - 雷电3
+      - [USB热插拔 config.plist + SSDT-TYPC.dsl + SSDT-YTBT.dsl](https://github.com/the-darkvoid/XPS9360-macOS)
+   - HiDPI
+      - [one-key-hidpi](https://github.com/xzhih/one-key-hidpi)
+   - 其他
+      - [Base64 在线解码、编码](https://the-x.cn/base64/)
    
 5. 截图
 
