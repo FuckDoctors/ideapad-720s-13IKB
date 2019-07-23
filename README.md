@@ -46,7 +46,7 @@
 
       ![WiFi](screenshots/WiFi.png)
 
-   4. 蓝牙
+   4. 蓝牙 - 然而，貌似连上手机后一会就断开。。。
 
       ![蓝牙](screenshots/蓝牙.png)
 
