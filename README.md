@@ -58,7 +58,7 @@
 
       ![USB](screenshots/USB.png)
 
-   7. 雷电3
+   7. 雷电3 - 使用IOElectrify.kext后，如下图，然而并没有什么用，接HDMI显示器直接重启。。。
 
       ![雷电3](screenshots/雷电3.png)
 
