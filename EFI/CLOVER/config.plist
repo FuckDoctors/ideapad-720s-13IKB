@@ -151,7 +151,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>rename _RMV to XRMV, pair with SSDT-TYPC.aml</string>
+					<string>Rename _RMV to XRMV in RP09.PXSX and use with SSDT-TYPC.aml for USB-C hot plug support</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -161,6 +161,10 @@
 					<key>Replace</key>
 					<data>
 					WFJNVg==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					UlAwOQ==
 					</data>
 				</dict>
 				<dict>
