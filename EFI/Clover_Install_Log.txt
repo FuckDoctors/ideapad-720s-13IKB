@@ -1,0 +1,47 @@
+
+Clover EFI installer log - Tue Jul 23 23:13:54 CST 2019
+Installer version: v2.5k r5018 EFI bootloader
+======================================================
+/dev/disk0 (internal):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                         256.1 GB   disk0
+   1:                        EFI SYSTEM_DRV              272.6 MB   disk0s1
+   2:         Microsoft Reserved                         16.8 MB    disk0s2
+   3:       Microsoft Basic Data Windows                 106.8 GB   disk0s3
+   4:           Windows Recovery                         585.1 MB   disk0s4
+   5:                 Apple_APFS Container disk1         148.4 GB   disk0s5
+
+/dev/disk1 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +148.4 GB   disk1
+                                 Physical Store disk0s5
+   1:                APFS Volume macOS                   25.7 GB    disk1s1
+   2:                APFS Volume Preboot                 45.2 MB    disk1s2
+   3:                APFS Volume Recovery                509.7 MB   disk1s3
+   4:                APFS Volume VM                      1.1 GB     disk1s4
+
+Target volume /Volumes/macOS on disk1 is APFS on physical store disk0s5
+======================================================
+Backing up EFI files
+
+Backing up /Volumes/macOS/EFIROOTDIR/EFI folder to /Volumes/macOS/EFI-Backups/r4988/2019-07-23-23h13/EFI
+No Active Partition
+
+Stage 0 - Writing boot0af to /dev/rdisk0
+dd if=/dev/rdisk0 count=1 bs=512 of=/tmp/origMBR
+cp /tmp/origMBR /tmp/newMBR
+dd if=//usr/standalone/i386/boot0af of=/tmp/newMBR bs=440 count=1 conv=notrunc
+fdisk -f /tmp/newMBR -u -y /dev/rdisk0
+
+Stage 1 - Writing boot1f32 to /dev/rdisk0s1
+dd if=/dev/rdisk0s1 count=1 bs=512 of=/tmp/origbs
+boot volume format is FAT32
+cp /tmp/boot1f32 /tmp/newbs
+dd if=/tmp/origbs of=/tmp/newbs skip=3 seek=3 bs=1 count=87 conv=notrunc
+dd if=/tmp/newbs of=/dev/rdisk0s1
+
+Stage 2 - Written boot6 (x64) to /Volumes/SYSTEM_DRV/boot
+
+======================================================
+=========== Clover EFI Installation Finish ===========
+======================================================
