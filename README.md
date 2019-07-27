@@ -59,7 +59,7 @@
    - 雷电3驱动问题
   - 感觉根BIOS设置有关，但是进不去`Advanced`设置项无法更改配置。
      - 想修改BIOS，无奈搜索资料不知道怎么改，而且风险也大。
-  - 使用`setup_var`，`setup_var2`，`setup_var_3`均不能修改，要么`can't set variables using efi`，要么`error: out of rage`。
+  - 使用`setup_var`，`setup_var2`，`setup_var_3`均不能修改，要么`can't set variable using efi`，要么`offset is out of range`。
    
 - 其他的其他
    
