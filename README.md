@@ -10,8 +10,13 @@
   
 2. BIOS设置
 
-   1. 按网上说的那样的常规操作
-   2. 设置启动方式为Legacy Support，不能设为UEFI模式，否则卡内存分配。
+   1. Load Default Settings
+   2. OS Optimized Defaults -> false
+   3. Intel Virtual Technology -> Disabled
+   4. Intel Paltform Trust Technology -> Disabled
+   5. Intel (R) SGX
+      - Intel (R) SGX Control -> Software Controlled
+   6. Boot Mode -> Legacy Support (不能设为UEFI模式，否则卡内存分配)
 
 3. 驱动情况
 
