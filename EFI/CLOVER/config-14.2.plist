@@ -67,20 +67,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change H_EC to EC__</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SF9FQw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change GFX0 to IGPU</string>
 					<key>Disabled</key>
 					<false/>
@@ -165,23 +151,9 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X0RTTQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WERTTQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>Rename _RMV to XRMV in RP09.PXSX and use with SSDT-TYPC.aml for USB-C hot plug support</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					X1JNVg==
@@ -193,20 +165,6 @@
 					<key>TgtBridge</key>
 					<data>
 					UlAwOQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Rename _RMV to XRMV in RP09.PXSX and use with SSDT-TYPC.aml for USB-C hot plug support</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1JNVg==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFJNVg==
 					</data>
 				</dict>
 				<dict>
@@ -227,10 +185,6 @@
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
-		<key>DisabledAML</key>
-		<array>
-			<string>SSDT-Deep-Idle.aml</string>
-		</array>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -274,6 +228,7 @@
 			<string>SSDT-YTBT.aml</string>
 			<string>ssdt-rmne.aml</string>
 			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-Deep-Idle.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -650,17 +605,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>04/22/2019</string>
+		<string>05/28/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP152.88Z.F000.B00.1904222000</string>
+		<string>MBP142.88Z.F000.B00.1905281615</string>
 		<key>Board-ID</key>
-		<string>Mac-827FB448E656EC26</string>
+		<string>Mac-CAD6701F7CEA0921</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02804902CDJH4R1H</string>
+		<string>C02743130QXHRPCFB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -672,7 +627,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>220.260.170.0.0</string>
+		<string>196.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -688,11 +643,11 @@
 		<key>PlatformFeature</key>
 		<string>0x1A</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,2</string>
+		<string>MacBookPro14,2</string>
 		<key>SerialNumber</key>
-		<string>C02W53ZHJHCD</string>
+		<string>C02VL3YXHV2N</string>
 		<key>SmUUID</key>
-		<string>45CA11A3-BFFC-405B-AE9B-1CE626021836</string>
+		<string>2A645DE8-6BA8-491B-B2C8-A05CABDB4C50</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

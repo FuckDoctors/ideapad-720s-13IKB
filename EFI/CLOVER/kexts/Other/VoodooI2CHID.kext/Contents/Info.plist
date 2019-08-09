@@ -280,11 +280,6 @@
 			<string>VoodooI2CMultitouchHIDEventDriver</string>
 			<key>IOProbeScore</key>
 			<integer>200</integer>
-			<key>IOPropertyMatch</key>
-			<dict>
-				<key>Transport</key>
-				<string>I2C</string>
-			</dict>
 			<key>IOProviderClass</key>
 			<string>IOHIDInterface</string>
 		</dict>
