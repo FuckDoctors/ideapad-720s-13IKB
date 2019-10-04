@@ -1,6 +1,6 @@
 
-Clover EFI installer log - Tue Jul 23 23:13:54 CST 2019
-Installer version: v2.5k r5018 EFI bootloader
+Clover EFI installer log - Fri Sep  6 23:40:54 CST 2019
+Installer version: v2.5k r5070 EFI bootloader
 ======================================================
 /dev/disk0 (internal):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
@@ -15,16 +15,16 @@ Installer version: v2.5k r5018 EFI bootloader
    #:                       TYPE NAME                    SIZE       IDENTIFIER
    0:      APFS Container Scheme -                      +148.4 GB   disk1
                                  Physical Store disk0s5
-   1:                APFS Volume macOS                   25.7 GB    disk1s1
-   2:                APFS Volume Preboot                 45.2 MB    disk1s2
-   3:                APFS Volume Recovery                509.7 MB   disk1s3
+   1:                APFS Volume macOS                   31.9 GB    disk1s1
+   2:                APFS Volume Preboot                 45.3 MB    disk1s2
+   3:                APFS Volume Recovery                510.3 MB   disk1s3
    4:                APFS Volume VM                      1.1 GB     disk1s4
 
 Target volume /Volumes/macOS on disk1 is APFS on physical store disk0s5
 ======================================================
 Backing up EFI files
 
-Backing up /Volumes/macOS/EFIROOTDIR/EFI folder to /Volumes/macOS/EFI-Backups/r4988/2019-07-23-23h13/EFI
+Backing up /Volumes/macOS/EFIROOTDIR/EFI folder to /Volumes/macOS/EFI-Backups/r5018/2019-09-06-23h40/EFI
 No Active Partition
 
 Stage 0 - Writing boot0af to /dev/rdisk0

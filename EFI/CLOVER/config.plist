@@ -31,7 +31,7 @@
 				<key>FixRTC</key>
 				<false/>
 				<key>FixShutdown</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
@@ -223,6 +223,34 @@
 					pABZVEJUVEJTRUNQR04=
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change NTFY to XTFY</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					TlRGWQk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRGWQk=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _WAK to XWAK</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					UldBSwk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFdBSwk=
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -270,10 +298,10 @@
 			<string>ssdt_data.aml</string>
 			<string>SSDT-SMBUS.aml</string>
 			<string>SSDT-XCPM.aml</string>
-			<string>SSDT-TB3_v3.aml</string>
 			<string>SSDT-YTBT.aml</string>
 			<string>ssdt-rmne.aml</string>
 			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-TB3_v5.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -311,6 +339,33 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>AddProperties</key>
+		<array>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Key</key>
+				<string>hda-gfx</string>
+				<key>Value</key>
+				<data>
+				b25ib2FyZC0xAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Key</key>
+				<string>hda-gfx</string>
+				<key>Value</key>
+				<data>
+				b25ib2FyZC0xAA==
+				</data>
+			</dict>
+		</array>
 		<key>Audio</key>
 		<dict>
 			<key>ResetHDA</key>
@@ -337,6 +392,8 @@
 				<string>Internal</string>
 				<key>device_type</key>
 				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>layout-id</key>
 				<integer>22</integer>
 				<key>model</key>
@@ -348,45 +405,37 @@
 				<data>
 				AAAbWQ==
 				</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
 				<key>device-id</key>
 				<data>
 				FlkAAA==
 				</data>
-				<key>framebuffer-con0-busid</key>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
+				<key>enable-hdmi-dividers-fix</key>
 				<data>
-				AAAAAA==
+				AQAAAA==
+				</data>
+				<key>enable-hdmi20</key>
+				<data>
+				AQAAAA==
 				</data>
 				<key>framebuffer-con0-enable</key>
 				<data>
 				AQAAAA==
 				</data>
-				<key>framebuffer-con0-flags</key>
-				<data>
-				mAAAAA==
-				</data>
-				<key>framebuffer-con0-index</key>
-				<data>
-				AAAAAA==
-				</data>
 				<key>framebuffer-con0-pipe</key>
 				<data>
-				CAAAAA==
+				EgAAAA==
 				</data>
 				<key>framebuffer-con0-type</key>
 				<data>
 				AAQAAA==
 				</data>
-				<key>framebuffer-con1-busid</key>
-				<data>
-				BAAAAA==
-				</data>
 				<key>framebuffer-con1-enable</key>
 				<data>
 				AQAAAA==
-				</data>
-				<key>framebuffer-con1-flags</key>
-				<data>
-				hwEAAA==
 				</data>
 				<key>framebuffer-con1-index</key>
 				<data>
@@ -394,42 +443,30 @@
 				</data>
 				<key>framebuffer-con1-pipe</key>
 				<data>
-				CgAAAA==
-				</data>
-				<key>framebuffer-con1-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>framebuffer-con2-busid</key>
-				<data>
-				BgAAAA==
+				EgAAAA==
 				</data>
 				<key>framebuffer-con2-enable</key>
 				<data>
 				AQAAAA==
 				</data>
-				<key>framebuffer-con2-flags</key>
-				<data>
-				hwEAAA==
-				</data>
-				<key>framebuffer-con2-index</key>
-				<data>
-				AwAAAA==
-				</data>
 				<key>framebuffer-con2-pipe</key>
 				<data>
-				CgAAAA==
+				EgAAAA==
 				</data>
 				<key>framebuffer-con2-type</key>
 				<data>
 				AAQAAA==
 				</data>
+				<key>framebuffer-con2-alldata</key>
+				<data>AQUKAAAEAACHAQAAAgQKAAAIAACHAQAA</data>
 				<key>framebuffer-patch-enable</key>
 				<data>
 				AQAAAA==
 				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>model</key>
-				<string>HD Graphics 620</string>
+				<string>Intel HD Graphics 620</string>
 			</dict>
 		</dict>
 		<key>USB</key>

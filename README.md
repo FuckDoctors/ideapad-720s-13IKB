@@ -32,7 +32,7 @@
    - [x] 触摸板 - VoodooI2C，参考官方说明，修改DSDT（搜索zhbchwin查看修改的地方）
    - [x] USB 3.0 - Hackintool，通过SSDT注入，未使用USBPorts
    - [x] 小太阳（亮度调节） - F11和F12键，修改DSDT（搜索zhbchwin查看修改的地方）
-   - [ ] 雷电3 - 待完善，USB已支持热插拔，睡眠唤醒也没问题，但外接HDMI显示器直接重启
+   - [ ] 雷电3 - 无设备没法测试，USB已支持热插拔，睡眠唤醒也没问题，转接器外接HDMI显示器也OK
    - [x] HiDPI - 分辨率1080P，开启HiDPI后每次启动Logo都变大一下。。。
    - [x] 睡眠 - 貌似正常（使用SSDT-Deep-Idle反而有问题，去掉了）
    - [x] 变频 - 13档，1300-3400
@@ -60,6 +60,10 @@
       - [xps13 亮度调节](http://bbs.pcbeta.com/viewthread-1671644-1-1.html)
    - 雷电3
       - [USB热插拔 config.plist + SSDT-TYPC.dsl + SSDT-YTBT.dsl](https://github.com/the-darkvoid/XPS9360-macOS)
+      - 转换器外接HDMI显示器（重启修复）
+        - [config_Kabylake_dp.plist(采用方案)](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/blob/05a1e82bf57559326f59d325fb9c4d04379e9ac5/config_parts/config_Kabylake_dp.plist#L16)
+        - [0x591b0000, 0105 instead of 0306, HDMI](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/bcd876e93df197c1cbf04ba5923b5479f94988d4/config_HD615_620_630_640_650.plist#L349)
+        - [[Guide] Enable Intel IGPU HDMI/DP Audio (Sandy/Ivy/Haswell/Broadwell/Skylake/Kaby Lake/Kaby Lake-R)](https://www.elitemacx86.com/threads/guide-enable-intel-igpu-hdmi-dp-audio-sandy-ivy-haswell-broadwell-skylake-kaby-lake-kaby-lake-r.186/)
    - HiDPI
       - [one-key-hidpi](https://github.com/xzhih/one-key-hidpi)
    - 其他
@@ -72,6 +76,7 @@
       - 感觉根BIOS设置有关，但是进不去`Advanced`设置项无法更改配置。
       - 想修改BIOS，无奈搜索资料不知道怎么改，而且风险也大。
       - 使用`setup_var`，`setup_var2`，`setup_var_3`均不能修改，要么`can't set variable using efi`，要么`offset is out of range`。
+      - 可使用H20UVE修改
    - 惨痛经历
       - 可参看[手贱经历](手贱经历.md)，打算用编程器刷BIOS时，搞坏了电脑，维修时给换了主板，三星内存改成海力士了。。。
       - 之前的笔记本有过扩容内容后，无法开机，内存相关的dsdt信息有变，需要修改才行，而这次比较特殊，不修改dsdt居然可以进系统，保险起见，还是重新提取了dsdt，然后对比了一下内存相关信息确实有变，然后合并了过来，然后发现居然起不来了。。。又改回旧原来的dsdt才能进系统，有点出乎意料。。。
