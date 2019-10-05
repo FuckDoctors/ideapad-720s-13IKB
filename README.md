@@ -60,8 +60,9 @@
       - [xps13 亮度调节](http://bbs.pcbeta.com/viewthread-1671644-1-1.html)
    - 雷电3
       - [USB热插拔 config.plist + SSDT-TYPC.dsl + SSDT-YTBT.dsl](https://github.com/the-darkvoid/XPS9360-macOS)
-      - 转换器外接HDMI显示器（重启修复）
+      - 转换器外接HDMI显示器（重启修复：@2，DP，pipe:12，0105）
         - [config_Kabylake_dp.plist(采用方案)](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/blob/05a1e82bf57559326f59d325fb9c4d04379e9ac5/config_parts/config_Kabylake_dp.plist#L16)
+        - [[Guide] Intel IGPU HDMI/DP audio (all Sandy Bridge -> Kaby Lake [and likely later])](https://www.tonymacx86.com/threads/guide-intel-igpu-hdmi-dp-audio-all-sandy-bridge-kaby-lake-and-likely-later.189495/)
         - [0x591b0000, 0105 instead of 0306, HDMI](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/bcd876e93df197c1cbf04ba5923b5479f94988d4/config_HD615_620_630_640_650.plist#L349)
         - [[Guide] Enable Intel IGPU HDMI/DP Audio (Sandy/Ivy/Haswell/Broadwell/Skylake/Kaby Lake/Kaby Lake-R)](https://www.elitemacx86.com/threads/guide-enable-intel-igpu-hdmi-dp-audio-sandy-ivy-haswell-broadwell-skylake-kaby-lake-kaby-lake-r.186/)
    - HiDPI
