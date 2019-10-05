@@ -111,15 +111,19 @@
 
       ![USB](screenshots/USB.png)
 
-   7. 雷电3 - 使用IOElectrify.kext后，如下图，然而并没有什么用，接HDMI显示器直接重启。。。
+   7. 雷电3 - 使用`IOElectrify.kext`或`TbtForcePower.efi`后，如下图，然而并没有什么用，没设备测试。。点击关闭卡就直接重启了，所以暂且不用了。
 
       ![雷电3](screenshots/雷电3.png)
+	  
+      通过雷电3转接器外接HDMI显示器：
+	  
+      ![外接HDMI显示器](screenshots/hdmi-via-thunderbolt3.png)
 
    8. 小太阳
 
       ![小太阳](screenshots/小太阳.png)
 
    9. 变频
-
+   
       ![变频](screenshots/变频.png)
 
