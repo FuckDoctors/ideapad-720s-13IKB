@@ -223,6 +223,20 @@
 					WFdBSwk=
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>GPRW to XPRW(Instant wake), pair with SSDT-GPRW.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R1BSVwI=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFBSVwI=
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -270,6 +284,7 @@
 			<string>ssdt-rmne.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-TB3_v5.aml</string>
+			<string>SSDT-GPRW.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -413,6 +428,10 @@
 				<data>
 				EgAAAA==
 				</data>
+				<key>framebuffer-con2-alldata</key>
+				<data>
+				AQUKAAAEAACHAQAAAgQKAAAIAACHAQAA
+				</data>
 				<key>framebuffer-con2-enable</key>
 				<data>
 				AQAAAA==
@@ -425,8 +444,6 @@
 				<data>
 				AAQAAA==
 				</data>
-				<key>framebuffer-con2-alldata</key>
-				<data>AQUKAAAEAACHAQAAAgQKAAAIAACHAQAA</data>
 				<key>framebuffer-patch-enable</key>
 				<data>
 				AQAAAA==
