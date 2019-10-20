@@ -69,6 +69,7 @@
       - [one-key-hidpi](https://github.com/xzhih/one-key-hidpi)
    - 其他
       - [Base64 在线解码、编码](https://the-x.cn/base64/)
+      - [麦克风访问权限修复，手动修改TCC.db](https://appletoolbox.com/macbook-microphone-stopped-working-how-to-fix/)
    
 5. 其他
 
