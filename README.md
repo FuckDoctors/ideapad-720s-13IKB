@@ -32,7 +32,7 @@
    - [x] 触摸板 - VoodooI2C，参考官方说明，修改DSDT（搜索zhbchwin查看修改的地方）
    - [x] USB 3.0 - Hackintool，通过SSDT注入，未使用USBPorts
    - [x] 小太阳（亮度调节） - F11和F12键，修改DSDT（搜索zhbchwin查看修改的地方）
-   - [ ] 雷电3 - 无设备没法测试，USB已支持热插拔，睡眠唤醒也没问题，转接器外接HDMI显示器也OK
+   - [ ] 雷电3 - 无雷电设备没法测试，但是USB已支持热插拔，睡眠唤醒也没问题，转接器外接HDMI显示器也OK
    - [x] HiDPI - 分辨率1080P，开启HiDPI后每次启动Logo都变大一下。。。
    - [x] 睡眠 - 正常（使用SSDT-GPRW.aml后，去掉网络唤醒，10个小时掉电4%）
    - [x] 变频 - 13档，1300-3400
@@ -69,6 +69,7 @@
       - [one-key-hidpi](https://github.com/xzhih/one-key-hidpi)
    - 其他
       - [Base64 在线解码、编码](https://the-x.cn/base64/)
+      - 查看睡眠问题：`log show --last 1d | grep "Wake reason"`
       - [麦克风访问权限修复，手动修改TCC.db](https://appletoolbox.com/macbook-microphone-stopped-working-how-to-fix/)
    
 5. 其他
