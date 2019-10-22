@@ -70,7 +70,7 @@
    - 其他
       - [Base64 在线解码、编码](https://the-x.cn/base64/)
       - 查看睡眠问题：`log show --last 1d | grep "Wake reason"`
-      - [麦克风访问权限修复，手动修改TCC.db](https://appletoolbox.com/macbook-microphone-stopped-working-how-to-fix/)
+      - [麦克风访问权限修复，手动修改TCC.db](https://appletoolbox.com/macbook-microphone-stopped-working-how-to-fix/#comment-1428198)
    
 5. 其他
 
