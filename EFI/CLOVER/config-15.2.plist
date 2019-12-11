@@ -384,14 +384,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>#framebuffer-con0-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>#framebuffer-con2-type</key>
-				<data>
-				AAQAAA==
-				</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				AAAbWQ==
@@ -415,6 +407,10 @@
 				<key>framebuffer-con0-enable</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>
+				EgAAAA==
 				</data>
 				<key>framebuffer-con0-type</key>
 				<data>
@@ -443,6 +439,10 @@
 				<key>framebuffer-con2-pipe</key>
 				<data>
 				EgAAAA==
+				</data>
+				<key>framebuffer-con2-type</key>
+				<data>
+				AAQAAA==
 				</data>
 				<key>framebuffer-patch-enable</key>
 				<data>
@@ -608,7 +608,7 @@
 				<key>Comment</key>
 				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				SU9LaXQ=
@@ -626,7 +626,7 @@
 				<key>Comment</key>
 				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				SU9LaXQ=

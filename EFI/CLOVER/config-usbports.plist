@@ -244,6 +244,7 @@
 		<key>DisabledAML</key>
 		<array>
 			<string>SSDT-Deep-Idle.aml</string>
+			<string>SSDT-UIAC.aml</string>
 		</array>
 		<key>DropTables</key>
 		<array>
@@ -275,7 +276,6 @@
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-LPC.aml</string>
 			<string>SSDT-USBX.aml</string>
-			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>ssdt_data.aml</string>
 			<string>SSDT-SMBUS.aml</string>
