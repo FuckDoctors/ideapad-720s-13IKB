@@ -1,3 +1,7 @@
+Clover引导版 | [OpenCore引导版](https://github.com/FuckDoctors/ideapad-720s-13ikb-oc)
+
+
+
 1. 电脑配置
   
    | 配置项   | 配置内容                                          | 备注                                                         |
