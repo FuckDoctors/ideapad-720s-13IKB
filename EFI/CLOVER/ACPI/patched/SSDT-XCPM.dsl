@@ -17,6 +17,8 @@
 DefinitionBlock("", "SSDT", 2, "hack", "_XCPM", 0)
 {
 #endif
+    External (_PR.PR00, ProcessorObj)
+    
     Method(_PR.PR00._DSM, 4)
     {
         If (!Arg2) { Return (Buffer() { 0x03 } ) }
